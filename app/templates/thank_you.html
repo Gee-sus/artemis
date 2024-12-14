@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="thank-you-container">
+    <h2>Thank You!</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <p>We appreciate your interest in Artemis Freight Forwarding.</p>
+    <div class="return-home">
+        <a href="{{ url_for('home') }}" class="home-button">Return to Home</a>
+    </div>
+</div>
+{% endblock %} 

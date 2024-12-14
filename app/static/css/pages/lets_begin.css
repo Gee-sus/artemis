@@ -1,0 +1,86 @@
+.lets-begin-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0 4rem;
+    gap: 3rem;
+}
+
+.image-section {
+    flex: 1;
+    max-width: 55%;
+    height: 400px;
+    margin-top: 2rem;
+}
+
+.welcome-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+}
+
+.begins {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: #1E3A8A;
+}
+
+.form-group {
+    width: 300px;
+    margin: 20px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    background-color: #1E3A8A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.form-buttons button:hover {
+    background-color: #374151;
+}
+
+@media (max-width: 768px) {
+    .lets-begin-container {
+        flex-direction: column;
+        padding: 0 2rem;
+        gap: 3rem;
+        margin: 2rem auto;
+    }
+
+    .image-section,
+    .contact {
+        max-width: 100%;
+    }
+}
+
+/* Any other styles specific to lets_begin page */
