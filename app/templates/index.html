@@ -17,6 +17,14 @@
                 </div>
                 <div id="search-modal" class="modal">
                     <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Not a Member yet?</h3>
+                        <p>To track your freight, you need to become a member:</p>
+                        <div class="modal-options">
+                            <a href="{{ url_for('login')}}" class="modal-button">Login</a>
+                            <p>or</p>
+                            <a href="{{ url_for('lets_begin')}}" class="modal-button">Become a Member</a>
+                        </div>
 
                         
                     </div>
