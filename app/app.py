@@ -83,6 +83,20 @@ def our_philosophy():
 def thank_you():
     return render_template("thank_you.html")
 
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        # Add your login logic here
+        # For example:
+        # if check_credentials(username, password):
+        #     session['logged_in'] = True
+        #     return redirect(url_for('dashboard'))
+        # else:
+        #     flash('Invalid credentials')
+    return render_template("login.html")
+
 @app.route("/lets-begin", methods=['GET', 'POST'])
 def lets_begin():
     if request.method == 'POST':

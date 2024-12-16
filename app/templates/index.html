@@ -21,9 +21,9 @@
                         <h3>Not a Member yet?</h3>
                         <p>To track your freight, you need to become a member:</p>
                         <div class="modal-options">
-                            <a href="{{ url_for('login')}}" class="modal-button">Login</a>
+                            <a href="{{ url_for('login')}}" class="modal-button" target="_blank">Login</a>
                             <p>or</p>
-                            <a href="{{ url_for('lets_begin')}}" class="modal-button">Become a Member</a>
+                            <a href="{{ url_for('lets_begin')}}" class="modal-button" target="_blank">Become a Member</a>
                         </div>
 
                         
@@ -67,9 +67,12 @@
            
            
            
-    </main>     
+    </main>   
+
+    <script src="{{ url_for('static', filename='js/modal.js')}}"></script>
     
-{% endblock %}   
+{% endblock %}  
+
     
 </body>
 </html>
