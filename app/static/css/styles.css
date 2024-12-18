@@ -155,14 +155,14 @@ header {
 /* Tagline Styles */
 .tagline {
     text-align: center;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
     padding: 15px 0;
     font-size: 24px;
-    color: #374151; /* Dark gray for text */
+    color: #374151; 
     position: relative;
-    z-index: 2; /* Ensure tagline appears above background image */
-    margin-top: 50px; /* Consistent gap between header and background */
-    margin-bottom: 50px; /* Consistent gap between tagline and background */
+    z-index: 2; 
+    margin-top: 50px; 
+    margin-bottom: 50px; 
 }
 
 /* Background Section Styles */
@@ -244,7 +244,7 @@ header {
     }
 
     .background-section {
-        height: auto; /* Adjust the height for smaller screens */
+        height: auto; 
     }
 
     .input-container {
@@ -255,46 +255,46 @@ header {
 
 .section-title {
     text-align: center;
-    margin-top: 50px; /* Create space above the section title */
-    margin-bottom: 50px; /* Create space below the section title */
+    margin-top: 50px; 
+    margin-bottom: 50px; 
     font-size: 28px;
-    color: #1E3A8A; /* Dark Blue */
+    color: #1E3A8A; 
 }
 
-/* Content Section (Three Columns) */
+
 .content-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Space between each column */
-    max-width: 1200px; /* Limit width for better centering */
-    margin: 0 auto 100px auto; /* Center horizontally and create bottom spacing */
-    padding: 0 20px; /* Add padding to avoid edges */
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto 100px auto; 
+    padding: 0 20px;
 }
 
 .column {
-    background: #ffffff; /* White background for columns */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for each column */
+    background: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    width: calc(33.33% - 20px); /* Divide space into three columns with some gap */
-    border-radius: 8px; /* Rounded corners for a polished look */
+    width: calc(33.33% - 20px); 
+    border-radius: 8px; 
 
 }
 
 .column h4 {
-    color: #1E3A8A; /* Dark Blue for titles */
+    color: #1E3A8A; 
     margin-bottom: 10px;
     font-size: 20px;
 }
 
 .column p {
-    color: #374151; /* Dark gray for paragraph text */
+    color: #374151; 
     line-height: 1.6;
 }
 
-/* Footer Styles */
+
 .footer {
-    background-color: #1E3A8A; /* Dark Blue */
+    background-color: #1E3A8A; 
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -366,7 +366,7 @@ header {
 
 .modal p {
     color: #666;
-    margin bottom: 20px;
+    margin-bottom: 20px;
 
 }
 
