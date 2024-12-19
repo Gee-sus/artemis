@@ -10,9 +10,6 @@
     }
  }
 
- window.onload = function() {
-    modal.style.display = "none";
- }
 
  closeBtn.onClick = function() {
     modal.style.display = "none";

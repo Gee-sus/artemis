@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis Freight Forwarding</title>
-    <!-- Global styles -->
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/variables.css') }}">
     
-    <!-- Component styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/services.css') }}">
+    
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components/forms.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/services.css')}}">
-    
-    <!-- Page specific styles -->
+  
+   
     {% if request.endpoint == 'lets_begin' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/lets_begin.css') }}">
     {% endif %}
