@@ -1,6 +1,60 @@
  {% extends "base.html" %}
 
 {% block content %}
- <h2>Welcome to Artemis Booking</h2>
+<div class="artemis-booking-container">
+    <div class="artemis-booking-picture">
+        <img src="{{ url_for('static', filename='images/port_loading.jpg') }}" alt="Artemis Booking" class="img-fluid">
+    </div>
+    <div class="content-wrapper">
+        <div class="hero-content">
+            <h1>Global Ocean Shipping</h1>
+            <p>We navigate the complexities,<br> you focus on growth.</p>
+            <div class="button-group">
+                <a href="{{ url_for('login') }}" class="cta-button primary">Get Started</a>
+            </div>
+        </div>
+        <div class="lets-begin-overlay">
+            <h2 class="begins">Let's Begin</h2>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form action="/lets-begin" method="POST">
+                <div class="form-group">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Business Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="business_phone" name="business_phone" placeholder="Business Phone" required>
+                </div>
+                <div class="form-group">
+                    <select id="services" name="services" required>
+                        <option value="" disabled selected>Select Services Needed</option>
+                        <option value="import">Import</option>
+                        <option value="export">Export</option>
+                        <option value="trucking">Trucking</option>
+                        <option value="warehousing">Warehousing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="3" placeholder="Message for Artemis team..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
