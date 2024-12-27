@@ -1,6 +1,98 @@
 {% extends "base.html" %}
 
-{% block content %}
- <h3>this is your real time tracking page</h3>
+{% block title %}Real-Time Tracking{% endblock %}
 
+{% block content %}
+<div class="hero-image">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <div class="container">
+                <h3>Track Your Freight</h3>
+                <p>Our network of 1000+ verified independent drivers ensures reliable delivery nationwide</p>
+            </div>
+            
+            <div class="tracking-input-container">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter your tracking number">
+                    <a href="/lets-begin" class="btn btn-primary">Search</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="services-grid">
+    <!-- Real-Time GPS Tracking -->
+    <div class="service-card">
+        <i class="fas fa-satellite"></i>
+        <h6>Real-Time GPS Tracking</h6>
+        <p>Monitor your shipment's location in real-time with precise GPS tracking</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Available</a>
+    </div>
+
+    <!-- Status Notifications -->
+    <div class="service-card">
+        <i class="fas fa-bell"></i>
+        <h6>Status Notifications</h6>
+        <p>Get instant SMS and email updates about your shipment status</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Digital Documentation -->
+    <div class="service-card">
+        <i class="fas fa-file-alt"></i>
+        <h6>Digital Documentation</h6>
+        <p>Access all shipping documents digitally in one secure location</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Direct Communication -->
+    <div class="service-card">
+        <i class="fas fa-comments"></i>
+        <h6>Direct Communication</h6>
+        <p>Stay connected with drivers and support team through our messaging system</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Temperature Monitoring -->
+    <div class="service-card">
+        <i class="fas fa-temperature-high"></i>
+        <h6>Temperature Monitoring</h6>
+        <p>Monitor cargo temperature for sensitive shipments in real-time</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Route Optimization -->
+    <div class="service-card">
+        <i class="fas fa-route"></i>
+        <h6>Route Optimization</h6>
+        <p>Smart routing system for efficient and timely deliveries</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Delivery Window -->
+    <div class="service-card">
+        <i class="fas fa-clock"></i>
+        <h6>Delivery Window</h6>
+        <p>Get accurate estimated delivery times and scheduling options</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Proof of Delivery -->
+    <div class="service-card">
+        <i class="fas fa-clipboard-check"></i>
+        <h6>Proof of Delivery</h6>
+        <p>Digital confirmation and documentation of successful deliveries</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+
+    <!-- Custom Alerts -->
+    <div class="service-card">
+        <i class="fas fa-exclamation-circle"></i>
+        <h6>Custom Alerts</h6>
+        <p>Set up personalized notifications for specific shipment events</p>
+        <a href="/lets-begin" class="btn btn-outline-primary">Coming Soon</a>
+    </div>
+</div>
 {% endblock %}

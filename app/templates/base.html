@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/artemis_booking.css') }}">
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components/services.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/customs_streamlined.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/real_time_tracking.css') }}">
     
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components/forms.css') }}">
   
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components/login.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sea_freight.css') }}">
    
     {% if request.endpoint == 'lets_begin' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/lets_begin.css') }}">
@@ -43,6 +49,8 @@
                             <a href="{{ url_for('artemis_booking') }}" target="_blank">Artemis booking</a>
                             <a href="{{url_for('customs_streamlined')}}" target="_blank">Customs Streamlined</a>
                             <a href="{{url_for('real_time_tracking')}}" target="_blank">Real-time Tracking</a>
+                            <a href="{{url_for('trucking_solutions')}}" target="_blank">Trucking Solutions</a>
+                            
                         
                         </div>
 
@@ -56,7 +64,6 @@
                             <span class="arrow">▶</span>
                             <div class="submenu">
                                 <a href="{{url_for('sea_freight')}}" target="_blank">Sea Freight</a>
-                                <a href="{{url_for('trucking_solutions')}}" target="_blank">Trucking Solutions</a>
                                 <a href="{{url_for('air_freight')}}" target="_blank">Air Freight</a>
 
                             </div>

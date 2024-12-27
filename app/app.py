@@ -43,9 +43,9 @@ def sea_freight():
     return render_template("services/sea_freight.html")
 
 
-@app.route("/services/trucking-solutions")
+@app.route("/products/trucking-solutions")
 def trucking_solutions():
-    return render_template("services/trucking_solutions.html")
+    return render_template("products/trucking_solutions.html")
 
 
 @app.route("/services/air-freight")

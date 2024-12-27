@@ -1,0 +1,145 @@
+/* Sea Freight CSS - Prefix: sf- */
+
+/* Banner Section */
+.sf-main-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.sf-banner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sf-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sf-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Image Overlay */
+.sf-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.sf-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 80vh;
+    display: block;
+}
+
+/* Text Content */
+.sf-content h1,
+.sf-content p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.sf-content h1 {
+    top: 50%;
+    font-size: 3.2rem;
+    letter-spacing: 0.5px;
+}
+
+.sf-content p {
+    top: 60%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* Main Content Section */
+.sf-body {
+    padding: 60px 0;
+}
+
+.sf-overview {
+    margin-bottom: 40px;
+}
+
+.sf-services-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sf-services-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sf-ports {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sf-ports-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sf-ports-list li {
+    padding: 8px 0;
+}
+
+/* Contact Area */
+.sf-contact {
+    text-align: center;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.sf-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.sf-btn:hover {
+    background: #0056b3;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sf-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sf-content p {
+        font-size: 1.1rem;
+    }
+}

@@ -1,8 +1,63 @@
 {% extends "base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sea_freight.css') }}">
+{% endblock %}
 
 {% block content %}
+<!-- Header Banner -->
+<section class="sf-main-container">
+    <div class="sf-banner">
+        <div class="sf-content">
+            <div class="sf-img-container">
+                <img src="{{ url_for('static', filename='images/ship_overview2.jpg') }}" alt="Sea Freight">
+            </div>
+            <h1>Sea Freight Services</h1>
+            <p>Your trusted partner for New Zealand imports and exports</p>
+        </div>
+    </div>
+</section>
 
-<h2>sf</h2>
+<!-- Main Content -->
+<section class="sf-body">
+    <div class="sf-wrapper">
+        <!-- Services Overview -->
+        <div class="sf-overview">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>New Zealand Sea Freight Solutions</h2>
+                    <p>Specialized ocean freight services connecting New Zealand with global markets. We offer comprehensive shipping solutions through all major NZ ports.</p>
+                    <ul class="sf-services-list">
+                        <li>Import & Export Services</li>
+                        <li>Full Container Load (FCL)</li>
+                        <li>Less than Container Load (LCL)</li>
+                        <li>Trans-Tasman Shipping</li>
+                        <li>Asian Trade Route Services</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="sf-ports">
+                        <h3>Key New Zealand Ports</h3>
+                        <ul class="sf-ports-list">
+                            <li>Port of Auckland</li>
+                            <li>Port of Tauranga</li>
+                            <li>Lyttelton Port (Christchurch)</li>
+                            <li>Port Chalmers (Dunedin)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Contact Area -->
+        <div class="sf-contact">
+            <div class="sf-contact-wrap">
+                <h2>Ship To or From New Zealand</h2>
+                <p>Get in touch with our local experts for tailored shipping solutions</p>
+                <a href="{{ url_for('lets_begin') }}" class="sf-btn">Request a Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

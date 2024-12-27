@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block head %}
+  
+    <link rel="preload" as="image" href="{{ url_for('static', filename='images/container-pull.jpg') }}">
+{% endblock %}
+
 {% block content %}
 
     <main>
@@ -40,7 +45,10 @@
 
                     <div class="services-container">
                         <div class="services-image">
-                            <img src="{{ url_for('static', filename='images/container-pull.jpg')}}"/>
+                            <img src="{{ url_for('static', filename='images/container-pull.jpg')}}" 
+                                 alt="Container logistics"
+                                 loading="eager"
+                                 decoding="async"/>
 
                         </div>
                         <div class="services-content">
