@@ -15,6 +15,83 @@
             </div>
             <h1>Sea Freight Services</h1>
             <p>Your trusted partner for New Zealand imports and exports</p>
+            <a href="{{ url_for('lets_begin') }}" class="cta-button primary">Let's Start</a>
+        </div>
+    </div>
+</section>
+
+<!-- Partner Ticker Section -->
+<section class="partner-ticker-container">
+    <h2 class="ticker-heading">Our Shipping Partners</h2>
+    <div class="ticker-wrapper">
+        <div class="ticker-track">
+            <!-- Original items -->
+            <div class="ticker-item maersk">
+                <img src="{{ url_for('static', filename='images/partners/Maersk_Line_Logo,_July_2021.svg') }}" alt="Maersk">
+                <span>Maersk Line</span>
+            </div>
+            <div class="ticker-item msc">
+                <img src="{{ url_for('static', filename='images/partners/Mediterranean_Shipping_Company_logo.svg') }}" alt="MSC">
+                <span>MSC</span>
+            </div>
+            <div class="ticker-item cosco">
+                <img src="{{ url_for('static', filename='images/partners/COSCOCS-ver1.svg') }}" alt="COSCO">
+                <span>COSCO</span>
+            </div>
+            <div class="ticker-item cma-cgm">
+                <img src="{{ url_for('static', filename='images/partners/CMA_CGM_logo.svg') }}" alt="CMA CGM">
+                <span>CMA CGM</span>
+            </div>
+            <div class="ticker-item hapag-lloyd">
+                <img src="{{ url_for('static', filename='images/partners/hapag lloyd.svg') }}" alt="Hapag-Lloyd">
+                <span>Hapag-Lloyd</span>
+            </div>
+            <div class="ticker-item one-line">
+                <img src="{{ url_for('static', filename='images/partners/Ocean_Network_Express_logo.svg') }}" alt="ONE">
+                <span>Ocean Network Express</span>
+            </div>
+            <div class="ticker-item apl">
+                <img src="{{ url_for('static', filename='images/partners/APL.svg') }}" alt="APL">
+                <span>APL</span>
+            </div>
+            <div class="ticker-item evergreen">
+                <img src="{{ url_for('static', filename='images/partners/Evergreen_Logo.svg') }}" alt="Evergreen">
+                <span>Evergreen Marine</span>
+            </div>
+
+            <!-- Duplicate items with same classes -->
+            <div class="ticker-item maersk">
+                <img src="{{ url_for('static', filename='images/partners/Maersk_Line_Logo,_July_2021.svg') }}" alt="Maersk">
+                <span>Maersk Line</span>
+            </div>
+            <div class="ticker-item msc">
+                <img src="{{ url_for('static', filename='images/partners/Mediterranean_Shipping_Company_logo.svg') }}" alt="MSC">
+                <span>MSC</span>
+            </div>
+            <div class="ticker-item cosco">
+                <img src="{{ url_for('static', filename='images/partners/COSCOCS-ver1.svg') }}" alt="COSCO">
+                <span>COSCO</span>
+            </div>
+            <div class="ticker-item cma-cgm">
+                <img src="{{ url_for('static', filename='images/partners/CMA_CGM_logo.svg') }}" alt="CMA CGM">
+                <span>CMA CGM</span>
+            </div>
+            <div class="ticker-item hapag-lloyd">
+                <img src="{{ url_for('static', filename='images/partners/hapag lloyd.svg') }}" alt="Hapag-Lloyd">
+                <span>Hapag-Lloyd</span>
+            </div>
+            <div class="ticker-item one-line">
+                <img src="{{ url_for('static', filename='images/partners/Ocean_Network_Express_logo.svg') }}" alt="ONE">
+                <span>Ocean Network Express</span>
+            </div>
+            <div class="ticker-item apl">
+                <img src="{{ url_for('static', filename='images/partners/APL.svg') }}" alt="APL">
+                <span>APL</span>
+            </div>
+            <div class="ticker-item evergreen">
+                <img src="{{ url_for('static', filename='images/partners/Evergreen_Logo.svg') }}" alt="Evergreen">
+                <span>Evergreen Marine</span>
+            </div>
         </div>
     </div>
 </section>
@@ -25,39 +102,34 @@
         <!-- Services Overview -->
         <div class="sf-overview">
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>New Zealand Sea Freight Solutions</h2>
-                    <p>Specialized ocean freight services connecting New Zealand with global markets. We offer comprehensive shipping solutions through all major NZ ports.</p>
-                    <ul class="sf-services-list">
-                        <li>Import & Export Services</li>
-                        <li>Full Container Load (FCL)</li>
-                        <li>Less than Container Load (LCL)</li>
-                        <li>Trans-Tasman Shipping</li>
-                        <li>Asian Trade Route Services</li>
-                    </ul>
+                <div class="col-lg-6 sf-info-box">
+                    <div class="sf-content-card">
+                        <h2>New Zealand Sea Freight Solutions</h2>
+                        <p>Specialized ocean freight services connecting New Zealand with global markets. We offer comprehensive shipping solutions through all major NZ ports.</p>
+                        <ul class="sf-services-list">
+                            <li><i class="fas fa-ship"></i> Import & Export Services</li>
+                            <li><i class="fas fa-box"></i> Full Container Load (FCL)</li>
+                            <li><i class="fas fa-boxes"></i> Less than Container Load (LCL)</li>
+                            <li><i class="fas fa-route"></i> Trans-Tasman Shipping</li>
+                            <li><i class="fas fa-globe-asia"></i> Asian Trade Route Services</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="sf-ports">
+                <div class="col-lg-6 sf-info-box">
+                    <div class="sf-content-card">
                         <h3>Key New Zealand Ports</h3>
                         <ul class="sf-ports-list">
-                            <li>Port of Auckland</li>
-                            <li>Port of Tauranga</li>
-                            <li>Lyttelton Port (Christchurch)</li>
-                            <li>Port Chalmers (Dunedin)</li>
+                            <li><i class="fas fa-anchor"></i> Port of Auckland</li>
+                            <li><i class="fas fa-anchor"></i> Port of Tauranga</li>
+                            <li><i class="fas fa-anchor"></i> Lyttelton Port (Christchurch)</li>
+                            <li><i class="fas fa-anchor"></i> Port Chalmers (Dunedin)</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Contact Area -->
-        <div class="sf-contact">
-            <div class="sf-contact-wrap">
-                <h2>Ship To or From New Zealand</h2>
-                <p>Get in touch with our local experts for tailored shipping solutions</p>
-                <a href="{{ url_for('lets_begin') }}" class="sf-btn">Request a Quote</a>
-            </div>
-        </div>
+    
     </div>
 </section>
 {% endblock %}

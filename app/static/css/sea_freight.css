@@ -63,13 +63,30 @@
 }
 
 .sf-content h1 {
-    top: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
     font-size: 3.2rem;
     letter-spacing: 0.5px;
 }
 
 .sf-content p {
-    top: 60%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -77,69 +94,511 @@
 
 /* Main Content Section */
 .sf-body {
-    padding: 60px 0;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.sf-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sf-overview {
-    margin-bottom: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-.sf-services-list {
-    list-style: none;
-    padding-left: 0;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.sf-services-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    display: flex;
 }
 
-.sf-ports {
-    background: #f8f9fa;
+.sf-info-box {
     padding: 20px;
-    border-radius: 8px;
+    display: flex;
+    justify-content: center;
 }
 
+.sf-content-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sf-content-card h2,
+.sf-content-card h3 {
+    text-align: center;
+    color: #1a4b84;
+    font-size: 24px;
+    margin-bottom: 30px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.sf-content-card h2::after,
+.sf-content-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.sf-content-card p {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.sf-services-list,
 .sf-ports-list {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 30px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+.sf-services-list li,
 .sf-ports-list li {
-    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+    min-height: 50px;
 }
 
-/* Contact Area */
-.sf-contact {
-    text-align: center;
-    padding: 40px;
-    background: #f8f9fa;
-    border-radius: 8px;
+.sf-services-list li:last-child,
+.sf-ports-list li:last-child {
+    border-bottom: none;
 }
 
-.sf-btn {
+.sf-services-list i,
+.sf-ports-list i {
+    width: 30px;
+    color: #007bff;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Ensure both lists have similar visual weight */
+.sf-ports-list li {
+    min-height: 60px;
+}
+
+/* Hover effects */
+.sf-content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sf-services-list li:hover,
+.sf-ports-list li:hover {
+    background-color: #f8f9fa;
+    padding-left: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sf-content-card {
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .sf-content-card h2,
+    .sf-content-card h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .sf-content-card p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 15px 0;
+    }
+
+    .sf-services-list li,
+    .sf-ports-list li {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+
+    .sf-services-list i,
+    .sf-ports-list i {
+        font-size: 16px;
+        width: 25px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    .sf-overview {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    .sf-content-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .sf-content-card h2,
+    .sf-content-card h3 {
+        font-size: 20px;
+    }
+
+    .sf-content-card p {
+        font-size: 15px;
+    }
+
+    .sf-services-list li,
+    .sf-ports-list li {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    /* Improve touch targets */
+    .sf-services-list li,
+    .sf-ports-list li {
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+    }
+
+    /* Add subtle animation for better interaction feedback */
+    .sf-services-list li:active,
+    .sf-ports-list li:active {
+        background-color: #f0f0f0;
+        transform: scale(0.98);
+    }
+}
+
+/* Prevent content from sticking to edges on very small devices */
+@media (max-width: 320px) {
+    .sf-content-card {
+        padding: 15px;
+    }
+
+    .sf-services-list li,
+    .sf-ports-list li {
+        padding: 8px 5px;
+    }
+}
+
+/* Updated button styles to match artemis_booking */
+.sf-content .cta-button.primary {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #1e40af;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
     display: inline-block;
-    padding: 12px 30px;
-    background: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    transition: all 0.3s ease;
 }
 
-.sf-btn:hover {
-    background: #0056b3;
-    color: #fff;
-    text-decoration: none;
+.sf-content .cta-button.primary:hover {
+    background-color: #1e3a8a;
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
+/* Mobile Responsiveness for button */
 @media (max-width: 768px) {
-    .sf-content h1 {
-        font-size: 2.5rem;
+    .sf-content .cta-button.primary {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        top: 65%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sf-content .cta-button.primary {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.875rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Partner Ticker Container - News Style Ticker */
+.partner-ticker-container {
+    width: 100%;
+    background: #f8f9fa;
+    padding: 25px 0;
+    margin: 60px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+/* Add heading styles */
+.ticker-heading {
+    text-align: center;
+    color: #1a4b84;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Optional decorative underline for heading */
+.ticker-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+/* Adjust container padding to accommodate heading */
+.ticker-wrapper {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.ticker-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    animation: tickerMove 80s linear infinite;
+    padding-right: 100%;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    min-width: 200px;
+}
+
+.ticker-item svg,
+.ticker-item img {
+    height: 40px;
+    width: auto;
+    margin: 0 15px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    display: block;
+}
+
+/* Specific logo adjustments */
+.ticker-item img.cma-cgm {
+    height: 35px; /* Slightly smaller due to aspect ratio */
+}
+
+.ticker-item img.hapag-lloyd {
+    height: 45px; /* Slightly larger to match other logos */
+}
+
+.ticker-item img.one-line {
+    height: 30px; /* Smaller due to wide aspect ratio */
+}
+
+.ticker-item img {
+    height: 40px;
+    width: auto;
+    margin: 0 15px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    display: block;
+}
+
+.ticker-item:hover img {
+    filter: grayscale(0%);
+}
+
+.ticker-item span {
+    color: #333333;  /* Dark gray for better readability */
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Optional: slightly darker on hover for better interaction */
+.ticker-item:hover span {
+    color: #000000;
+}
+
+/* Animation */
+@keyframes tickerMove {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .ticker-heading {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
     }
     
-    .sf-content p {
-        font-size: 1.1rem;
+    .ticker-wrapper {
+        margin-top: 35px;
+        height: 60px;
+    }
+
+    .ticker-item {
+        padding: 0 30px;
+    }
+
+    .ticker-item img {
+        height: 30px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticker-heading {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .ticker-wrapper {
+        margin-top: 30px;
+        height: 50px;
+    }
+
+    .ticker-item {
+        padding: 0 20px;
+    }
+
+    .ticker-item img {
+        height: 25px;
+        margin: 0 8px;
+    }
+
+    .ticker-item span {
+        font-size: 0.85rem;
+    }
+}
+
+/* Company Brand Colors */
+.ticker-item.maersk span {
+    color: #00243d;  /* Maersk Navy Blue */
+}
+
+.ticker-item.msc span {
+    color: #2a3c8b;  /* MSC Blue */
+}
+
+.ticker-item.cosco span {
+    color: #E6000D;  /* COSCO Red */
+}
+
+.ticker-item.cma-cgm span {
+    color: #004B8D;  /* CMA CGM Blue */
+}
+
+.ticker-item.hapag-lloyd span {
+    color: #D1002C;  /* Hapag-Lloyd Red */
+}
+
+.ticker-item.one-line span {
+    color: #E60012;  /* ONE Magenta */
+}
+
+.ticker-item.apl span {
+    color: #CC0000;  /* APL Red */
+}
+
+.ticker-item.evergreen span {
+    color: #00A650;  /* Evergreen Green */
+}
+
+/* Remove the default color */
+.ticker-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Mobile-specific spacing for banner elements */
+@media (max-width: 768px) {
+    .sf-banner .sf-content h1 {
+        margin-bottom: 20px;  /* Space between heading and paragraph */
+        font-size: 2rem;      /* Adjusted font size for mobile */
+    }
+
+    .sf-banner .sf-content p {
+        margin-bottom: 25px;  /* Space between paragraph and button */
+        font-size: 1rem;      /* Adjusted font size for mobile */
+        line-height: 1.5;     /* Better readability for mobile */
+    }
+
+    .sf-banner .sf-content .cta-button {
+        margin-top: 10px;     /* Additional space above button */
+        padding: 12px 25px;   /* Comfortable touch target size */
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .sf-banner .sf-content h1 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+
+    .sf-banner .sf-content p {
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+
+    .sf-banner .sf-content .cta-button {
+        margin-top: 8px;
+        padding: 10px 20px;
     }
 }
