@@ -1,8 +1,106 @@
 {% extends "base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/import_clearance.css') }}">
+{% endblock %}
+
+{% block title %}Import Clearance Services NZ - Artemis Shipping{% endblock %}
 
 {% block content %}
+<div class="ic-page">
+    <div class="ic-hero">
+        <div class="ic-hero-content">
+            <h1 class="ic-hero-title">Import Clearance Services in New Zealand</h1>
+            <p class="ic-hero-text">Navigate New Zealand's customs requirements with confidence through our expert import clearance services</p>
+            <a href="{{ url_for('lets_begin') }}" class="ic-cta-button">Get Started</a>
+        </div>
+    </div>
 
-<h2>impot</h2>
+    <div class="ic-services">
+        <div class="ic-service-card">
+            <h2 class="ic-service-title">Comprehensive Customs Clearance</h2>
+            <ul class="ic-service-list">
+                <li class="ic-service-item">TSW (Trade Single Window) lodgement</li>
+                <li class="ic-service-item">MPI clearances and biosecurity management</li>
+                <li class="ic-service-item">Tariff classification assistance</li>
+                <li class="ic-service-item">Duty and GST calculations</li>
+                <li class="ic-service-item">Customs valuation support</li>
+            </ul>
+        </div>
 
+        <div class="ic-service-card">
+            <h2 class="ic-service-title">Compliance & Documentation</h2>
+            <ul class="ic-service-list">
+                <li class="ic-service-item">Import permit applications</li>
+                <li class="ic-service-item">Prohibited and restricted goods handling</li>
+                <li class="ic-service-item">Documentation verification</li>
+                <li class="ic-service-item">Compliance with NZ Customs Service regulations</li>
+                <li class="ic-service-item">Electronic customs clearance processing</li>
+            </ul>
+        </div>
+
+        <div class="ic-service-card">
+            <h2 class="ic-service-title">Specialized Services</h2>
+            <ul class="ic-service-list">
+                <li class="ic-service-item">Food safety clearances</li>
+                <li class="ic-service-item">Healthcare product compliance</li>
+                <li class="ic-service-item">Dangerous goods documentation</li>
+                <li class="ic-service-item">Temporary imports processing</li>
+                <li class="ic-service-item">Personal effects clearance</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ic-process">
+        <h2 class="ic-process-title">Our Import Clearance Process</h2>
+        <div class="ic-process-steps">
+            <div class="ic-step">
+                <span class="ic-step-number">1</span>
+                <h3 class="ic-step-title">Documentation Review</h3>
+                <p class="ic-step-text">Thorough assessment of import documents and requirements</p>
+            </div>
+            <div class="ic-step">
+                <span class="ic-step-number">2</span>
+                <h3 class="ic-step-title">Classification & Valuation</h3>
+                <p class="ic-step-text">Accurate tariff classification and customs value determination</p>
+            </div>
+            <div class="ic-step">
+                <span class="ic-step-number">3</span>
+                <h3 class="ic-step-title">Customs Declaration</h3>
+                <p class="ic-step-text">Electronic lodgement through TSW system</p>
+            </div>
+            <div class="ic-step">
+                <span class="ic-step-number">4</span>
+                <h3 class="ic-step-title">Clearance & Delivery</h3>
+                <p class="ic-step-text">Securing customs release and coordinating delivery</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ic-compliance">
+        <h2 class="ic-compliance-title">Key NZ Import Requirements</h2>
+        <div class="ic-compliance-grid">
+            <div class="ic-compliance-item">
+                <h3 class="ic-compliance-subtitle">Customs Requirements</h3>
+                <p class="ic-compliance-text">Import entry lodgement, duty/GST payment, supplier declarations</p>
+            </div>
+            <div class="ic-compliance-item">
+                <h3 class="ic-compliance-subtitle">Biosecurity Controls</h3>
+                <p class="ic-compliance-text">MPI clearance, treatment certificates, phytosanitary requirements</p>
+            </div>
+            <div class="ic-compliance-item">
+                <h3 class="ic-compliance-subtitle">Product Standards</h3>
+                <p class="ic-compliance-text">Safety standards compliance, labeling requirements, permits</p>
+            </div>
+            <div class="ic-compliance-item">
+                <h3 class="ic-compliance-subtitle">Documentation</h3>
+                <p class="ic-compliance-text">Commercial invoice, packing list, certificates of origin</p>
+            </div>
+        </div>
+    </div>
+
+   
+    
+</div>
 {% endblock %}

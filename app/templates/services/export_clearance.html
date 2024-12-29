@@ -1,8 +1,302 @@
 {% extends "base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/export_clearance.css') }}">
+{% endblock %}
+
+{% block title %}Export Market Intelligence & Clearance Services - Artemis Shipping{% endblock %}
 
 {% block content %}
+<div class="ec-page">
+    <div class="ec-hero">
+        <div class="ec-hero-content">
+            <h1 class="ec-hero-title">Strategic Export & Market Intelligence</h1>
+            <p class="ec-hero-text">Transform Your NZ Products into Global Brands with Data-Driven Market Entry</p>
+            <a href="{{ url_for('lets_begin') }}" class="ec-cta-button">Market Analysis</a>
+        </div>
+    </div>
 
-<h2>export cleaance</h2>
+    <div class="ec-services">
+        <div class="ec-service-card">
+            <h2 class="ec-service-title">Premium Markets</h2>
+            <ul class="ec-service-list">
+                <li class="ec-service-item">Luxury Food & Beverage</li>
+                <li class="ec-service-item">Craft & Artisanal Products</li>
+                <li class="ec-service-item">Natural Care Products</li>
+                <li class="ec-service-item">Premium Pet Products</li>
+                <li class="ec-service-item">Nutraceuticals & Supplements</li>
+            </ul>
+        </div>
 
+        <div class="ec-service-card">
+            <h2 class="ec-service-title">Compliance Expertise</h2>
+            <ul class="ec-service-list">
+                <li class="ec-service-item">MPI E-cert System Access</li>
+                <li class="ec-service-item">RMP Documentation & Setup</li>
+                <li class="ec-service-item">OMAR Requirements</li>
+                <li class="ec-service-item">FDA/FSANZ Compliance</li>
+                <li class="ec-service-item">Organic/Halal Certification</li>
+            </ul>
+        </div>
+
+        <div class="ec-service-card">
+            <h2 class="ec-service-title">Market Intelligence</h2>
+            <ul class="ec-service-list">
+                <li class="ec-service-item">BOL Data Analysis</li>
+                <li class="ec-service-item">Price Trend Monitoring</li>
+                <li class="ec-service-item">Buyer Database Access</li>
+                <li class="ec-service-item">Competitor Intelligence</li>
+                <li class="ec-service-item">Seasonal Demand Tracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ec-certification">
+        <h2 class="ec-certification-title">Product Certification Hub</h2>
+        <div class="ec-certification-grid">
+            <div class="ec-certification-item">
+                <h3 class="ec-certification-subtitle">Food & Beverage</h3>
+                <ul class="ec-certification-list">
+                    <li class="ec-certification-point">MPI Electronic Certification</li>
+                    <li class="ec-certification-point">Risk Management Programs</li>
+                    <li class="ec-certification-point">Food Safety Plans</li>
+                    <li class="ec-certification-point">Laboratory Analysis Reports</li>
+                    <li class="ec-certification-point">Ingredient Testing Documentation</li>
+                </ul>
+            </div>
+
+            <div class="ec-certification-item">
+                <h3 class="ec-certification-subtitle">Natural Products</h3>
+                <ul class="ec-certification-list">
+                    <li class="ec-certification-point">AsureQuality Certification</li>
+                    <li class="ec-certification-point">BioGro NZ Standards</li>
+                    <li class="ec-certification-point">CITES Export Permits</li>
+                    <li class="ec-certification-point">Sustainability Certificates</li>
+                    <li class="ec-certification-point">Origin Documentation</li>
+                </ul>
+            </div>
+
+            <div class="ec-certification-item">
+                <h3 class="ec-certification-subtitle">Nutraceuticals</h3>
+                <ul class="ec-certification-list">
+                    <li class="ec-certification-point">Medsafe Approval Documents</li>
+                    <li class="ec-certification-point">Clinical Data Reports</li>
+                    <li class="ec-certification-point">Safety Assessment Files</li>
+                    <li class="ec-certification-point">Export Market Standards</li>
+                    <li class="ec-certification-point">Product Registration</li>
+                </ul>
+            </div>
+
+            <div class="ec-certification-item">
+                <h3 class="ec-certification-subtitle">Premium Goods</h3>
+                <ul class="ec-certification-list">
+                    <li class="ec-certification-point">Quality Certifications</li>
+                    <li class="ec-certification-point">Brand Protection Documents</li>
+                    <li class="ec-certification-point">Premium Packaging Compliance</li>
+                    <li class="ec-certification-point">Market-Specific Standards</li>
+                    <li class="ec-certification-point">Product Authentication</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec-markets">
+        <h2 class="ec-markets-title">Market Opportunities</h2>
+        <div class="ec-markets-grid">
+            <div class="ec-market-item">
+                <h3 class="ec-market-subtitle">Premium Pet Care</h3>
+                <div class="ec-market-stats">
+                    <span class="ec-market-value">$2.3B</span>
+                    <span class="ec-market-growth">+15% YoY</span>
+                </div>
+                <h4 class="ec-market-region">Asia & Middle East</h4>
+                <ul class="ec-market-list">
+                    <li class="ec-market-point">Natural NZ ingredients focus</li>
+                    <li class="ec-market-point">Premium packaging demand</li>
+                    <li class="ec-market-point">Key Markets: Japan, Singapore, UAE</li>
+                    <li class="ec-market-point">Health-conscious pet owners</li>
+                </ul>
+            </div>
+
+            <div class="ec-market-item">
+                <h3 class="ec-market-subtitle">Craft Beverages</h3>
+                <div class="ec-market-stats">
+                    <span class="ec-market-value">$1.8B</span>
+                    <span class="ec-market-growth">+22% YoY</span>
+                </div>
+                <h4 class="ec-market-region">Southeast Asia</h4>
+                <ul class="ec-market-list">
+                    <li class="ec-market-point">Rising craft beer demand</li>
+                    <li class="ec-market-point">Premium spirits opportunity</li>
+                    <li class="ec-market-point">Key Markets: Singapore, Vietnam, Thailand</li>
+                    <li class="ec-market-point">Growing middle-class consumers</li>
+                </ul>
+            </div>
+
+            <div class="ec-market-item">
+                <h3 class="ec-market-subtitle">Honey Products</h3>
+                <div class="ec-market-stats">
+                    <span class="ec-market-value">$1.2B</span>
+                    <span class="ec-market-growth">+18% YoY</span>
+                </div>
+                <h4 class="ec-market-region">Middle East & EU</h4>
+                <ul class="ec-market-list">
+                    <li class="ec-market-point">Premium varieties beyond Manuka</li>
+                    <li class="ec-market-point">Gift market potential</li>
+                    <li class="ec-market-point">Key Markets: UAE, Germany, UK</li>
+                    <li class="ec-market-point">Health-conscious consumers</li>
+                </ul>
+            </div>
+
+            <div class="ec-market-item">
+                <h3 class="ec-market-subtitle">Nutraceuticals</h3>
+                <div class="ec-market-stats">
+                    <span class="ec-market-value">$3.4B</span>
+                    <span class="ec-market-growth">+25% YoY</span>
+                </div>
+                <h4 class="ec-market-region">East Asia</h4>
+                <ul class="ec-market-list">
+                    <li class="ec-market-point">Native NZ ingredients demand</li>
+                    <li class="ec-market-point">Scientific backing required</li>
+                    <li class="ec-market-point">Key Markets: Korea, Japan, Taiwan</li>
+                    <li class="ec-market-point">Premium health supplements</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec-process">
+        <h2 class="ec-process-title">Export Process Flow</h2>
+        <div class="ec-process-steps">
+            <div class="ec-step">
+                <span class="ec-step-number">1</span>
+                <h3 class="ec-step-title">Market Analysis</h3>
+                <ul class="ec-step-list">
+                    <li>Data-driven market research</li>
+                    <li>Buyer profiling & targeting</li>
+                    <li>Competitive analysis</li>
+                    <li>Price point optimization</li>
+                </ul>
+            </div>
+
+            <div class="ec-step">
+                <span class="ec-step-number">2</span>
+                <h3 class="ec-step-title">Compliance Planning</h3>
+                <ul class="ec-step-list">
+                    <li>Documentation preparation</li>
+                    <li>Certification requirements</li>
+                    <li>Standards alignment</li>
+                    <li>Regulatory review</li>
+                </ul>
+            </div>
+
+            <div class="ec-step">
+                <span class="ec-step-number">3</span>
+                <h3 class="ec-step-title">Documentation</h3>
+                <ul class="ec-step-list">
+                    <li>E-cert system setup</li>
+                    <li>Export permits & licenses</li>
+                    <li>Quality assurance docs</li>
+                    <li>Market-specific requirements</li>
+                </ul>
+            </div>
+
+            <div class="ec-step">
+                <span class="ec-step-number">4</span>
+                <h3 class="ec-step-title">Market Entry</h3>
+                <ul class="ec-step-list">
+                    <li>Distribution setup</li>
+                    <li>Logistics planning</li>
+                    <li>Launch strategy</li>
+                    <li>Performance tracking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec-advantages">
+        <h2 class="ec-advantages-title">New Zealand's Market Advantages</h2>
+        <div class="ec-advantages-grid">
+            <div class="ec-advantage-item">
+                <h3 class="ec-advantage-subtitle">CPTPP Benefits</h3>
+                <div class="ec-advantage-content">
+                    <span class="ec-advantage-tag">Tariff Reduction</span>
+                    <ul class="ec-advantage-list">
+                        <li>Preferential access to Japan</li>
+                        <li>Reduced duties in Vietnam</li>
+                        <li>Singapore free trade benefits</li>
+                        <li>Malaysian market advantages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ec-advantage-item">
+                <h3 class="ec-advantage-subtitle">China FTA</h3>
+                <div class="ec-advantage-content">
+                    <span class="ec-advantage-tag">Strategic Partnership</span>
+                    <ul class="ec-advantage-list">
+                        <li>Most favored nation status</li>
+                        <li>Reduced documentation requirements</li>
+                        <li>Expedited customs clearance</li>
+                        <li>Special economic zones access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ec-advantage-item">
+                <h3 class="ec-advantage-subtitle">ASEAN-AU-NZ FTA</h3>
+                <div class="ec-advantage-content">
+                    <span class="ec-advantage-tag">Regional Access</span>
+                    <ul class="ec-advantage-list">
+                        <li>Southeast Asian market entry</li>
+                        <li>Cumulative rules of origin</li>
+                        <li>Regional value chain integration</li>
+                        <li>Simplified customs procedures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ec-advantage-item">
+                <h3 class="ec-advantage-subtitle">UK-NZ FTA</h3>
+                <div class="ec-advantage-content">
+                    <span class="ec-advantage-tag">Premium Market</span>
+                    <ul class="ec-advantage-list">
+                        <li>Duty-free access for most goods</li>
+                        <li>Simplified border processes</li>
+                        <li>Recognition of NZ standards</li>
+                        <li>Enhanced IP protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec-cta-section">
+        <div class="ec-cta-container">
+            <h2 class="ec-cta-title">Ready to Expand Your Export Potential?</h2>
+            <p class="ec-cta-text">Let our data-driven insights and market expertise guide your international growth</p>
+            
+            <div class="ec-cta-stats">
+                <div class="ec-stat-item">
+                    <span class="ec-stat-number">94%</span>
+                    <span class="ec-stat-label">Success Rate</span>
+                </div>
+                <div class="ec-stat-item">
+                    <span class="ec-stat-number">15+</span>
+                    <span class="ec-stat-label">Markets Served</span>
+                </div>
+                <div class="ec-stat-item">
+                    <span class="ec-stat-number">24/7</span>
+                    <span class="ec-stat-label">Support</span>
+                </div>
+            </div>
+
+            <div class="ec-cta-buttons">
+                <a href="{{ url_for('lets_begin') }}" class="ec-primary-button">Start Your Analysis</a>
+                <a href="{{ url_for('lets_begin') }}" class="ec-secondary-button">Schedule Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

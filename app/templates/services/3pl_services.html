@@ -1,8 +1,39 @@
 {% extends "base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/3pl_services.css') }}">
+{% endblock %}
+
+{% block title %}3PL Services - Coming Soon - Artemis Shipping{% endblock %}
 
 {% block content %}
+<div class="tpl-page">
+    <div class="tpl-hero">
+        <div class="tpl-hero-content">
+            <h1 class="tpl-hero-title">3PL Services Coming Soon</h1>
+            <p class="tpl-hero-text">Expanding our logistics portfolio with comprehensive warehousing and distribution solutions</p>
+            
+            <div class="tpl-features">
+                <div class="tpl-feature">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Warehousing</span>
+                </div>
+                <div class="tpl-feature">
+                    <i class="fas fa-truck"></i>
+                    <span>Distribution</span>
+                </div>
+                <div class="tpl-feature">
+                    <i class="fas fa-laptop"></i>
+                    <span>Technology</span>
+                </div>
+            </div>
 
-<h2>3pl</h2>
-
+            <div class="tpl-cta-buttons">
+                <a href="{{ url_for('lets_begin') }}" class="tpl-primary-button">Stay Updated</a>
+                <a href="{{ url_for('lets_begin') }}" class="tpl-secondary-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

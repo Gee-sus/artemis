@@ -1,8 +1,153 @@
 {% extends "base.html" %}
 
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dangerous_goods.css') }}">
+{% endblock %}
+
+{% block title %}Dangerous Goods Handling - Artemis Shipping{% endblock %}
 
 {% block content %}
+<div class="dg-page">
+    <div class="dg-hero">
+        <div class="dg-hero-content">
+            <h1 class="dg-hero-title">Dangerous Goods Handling & Compliance</h1>
+            <p class="dg-hero-text">Expert handling of hazardous materials with complete regulatory compliance</p>
+            <a href="{{ url_for('lets_begin') }}" class="dg-cta-button">Get Started</a>
+        </div>
+    </div>
 
-<h2>dg</h2>
+    <div class="dg-services">
+        <h2 class="dg-section-title">Comprehensive Dangerous Goods Solutions</h2>
+        <p class="dg-section-subtitle">Industry-leading expertise in handling all classes of dangerous goods with full compliance and safety</p>
 
+        <div class="dg-service-cards">
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">Documentation & Compliance</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">Expert DG Declaration Preparation
+                        <span class="dg-service-detail">Accurate documentation ensuring smooth customs clearance</span>
+                    </li>
+                    <li class="dg-service-item">IMDG Code Compliance
+                        <span class="dg-service-detail">Up-to-date with latest regulatory requirements</span>
+                    </li>
+                    <li class="dg-service-item">Safety Data Sheet Management
+                        <span class="dg-service-detail">Comprehensive hazard communication and handling instructions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">Handling & Storage</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">Specialized Storage Solutions
+                        <span class="dg-service-detail">Temperature-controlled and segregated storage facilities</span>
+                    </li>
+                    <li class="dg-service-item">Expert Handling Procedures
+                        <span class="dg-service-detail">Certified DG handlers and specialized equipment</span>
+                    </li>
+                    <li class="dg-service-item">24/7 Monitoring Systems
+                        <span class="dg-service-detail">Real-time tracking and emergency response capability</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">Risk Management</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">Emergency Response Planning
+                        <span class="dg-service-detail">Immediate response protocols and trained personnel</span>
+                    </li>
+                    <li class="dg-service-item">Insurance Coverage
+                        <span class="dg-service-detail">Comprehensive coverage for high-risk shipments</span>
+                    </li>
+                    <li class="dg-service-item">Compliance Auditing
+                        <span class="dg-service-detail">Regular assessments ensuring regulatory adherence</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compliance & Documentation Section -->
+    <div class="dg-compliance">
+        <h2 class="dg-section-title">Compliance & Documentation</h2>
+        <p class="dg-section-subtitle">Complete documentation and regulatory compliance for all dangerous goods classes</p>
+
+        <div class="dg-service-cards">
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">International Standards</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">IMDG Code Compliance
+                        <span class="dg-service-detail">Latest maritime dangerous goods regulations</span>
+                    </li>
+                    <li class="dg-service-item">UN Standards Adherence
+                        <span class="dg-service-detail">Classification and packaging requirements</span>
+                    </li>
+                    <li class="dg-service-item">IATA DGR Compliance
+                        <span class="dg-service-detail">Air transport regulations and documentation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">Documentation Services</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">DG Declarations
+                        <span class="dg-service-detail">Professional preparation and verification</span>
+                    </li>
+                    <li class="dg-service-item">Safety Data Sheets
+                        <span class="dg-service-detail">Comprehensive hazard documentation</span>
+                    </li>
+                    <li class="dg-service-item">Container Packing Certificates
+                        <span class="dg-service-detail">IMDG compliant packing verification</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dg-service-card">
+                <h2 class="dg-service-title">Local Compliance</h2>
+                <ul class="dg-service-list">
+                    <li class="dg-service-item">NZ EPA Requirements
+                        <span class="dg-service-detail">Environmental Protection Authority standards</span>
+                    </li>
+                    <li class="dg-service-item">Port Authority Rules
+                        <span class="dg-service-detail">Local port and terminal regulations</span>
+                    </li>
+                    <li class="dg-service-item">WorkSafe NZ Guidelines
+                        <span class="dg-service-detail">Health and safety compliance</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA Section -->
+    <div class="dg-cta-section">
+        <div class="dg-cta-container">
+            <h2 class="dg-cta-title">Expert Dangerous Goods Handling</h2>
+            <p class="dg-cta-text">Trust our certified team for safe, compliant, and efficient dangerous goods logistics</p>
+            
+            <div class="dg-cta-stats">
+                <div class="dg-stat-item">
+                    <span class="dg-stat-number">100%</span>
+                    <span class="dg-stat-label">Compliance Rate</span>
+                </div>
+                <div class="dg-stat-item">
+                    <span class="dg-stat-number">24/7</span>
+                    <span class="dg-stat-label">Support</span>
+                </div>
+                <div class="dg-stat-item">
+                    <span class="dg-stat-number">100%</span>
+                    <span class="dg-stat-label">Digital Solutions</span>
+                </div>
+            </div>
+
+            <div class="dg-cta-buttons">
+                <a href="{{ url_for('lets_begin') }}" class="dg-primary-button">Get Started</a>
+                <a href="{{ url_for('lets_begin') }}" class="dg-secondary-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

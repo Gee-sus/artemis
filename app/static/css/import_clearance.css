@@ -1,0 +1,305 @@
+/* Page Container */
+.ic-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.ic-hero {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/container_yard.jpg') no-repeat center center;
+    background-size: cover;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 0;
+}
+
+.ic-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ic-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+.ic-hero-text {
+    font-size: 1.25rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.ic-hero-button {
+    margin-top: 0;
+}
+
+/* Services Section */
+.ic-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.ic-service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.ic-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ic-service-title {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.ic-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+.ic-service-item {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.ic-service-item:before {
+    content: "✓";
+    color: #1a237e;
+    position: absolute;
+    left: 0;
+}
+
+/* Process Section */
+.ic-process {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.ic-process-title {
+    color: #1a237e;
+    margin-bottom: 3rem;
+}
+
+.ic-process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ic-step {
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ic-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ic-step-number {
+    background: #1a237e;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.ic-step-title {
+    color: #1a237e;
+    margin-bottom: 1rem;
+}
+
+.ic-step-text {
+    color: #666;
+}
+
+/* Compliance Section */
+.ic-compliance {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ic-compliance-title {
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ic-compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ic-compliance-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ic-compliance-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ic-compliance-subtitle {
+    color: #1a237e;
+    margin-bottom: 1rem;
+}
+
+.ic-compliance-text {
+    color: #666;
+}
+
+/* CTA Section */
+.ic-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #1a237e;
+    color: white;
+}
+
+.ic-cta-title {
+    margin-bottom: 1rem;
+}
+
+.ic-cta-text {
+    margin-bottom: 2rem;
+}
+
+.ic-cta-button {
+    display: inline-block;
+    background: #1a237e;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.ic-cta-button:hover {
+    background: #151b60;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ic-cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .ic-hero {
+        height: 50vh;
+    }
+    
+    .ic-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .ic-hero-text {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .ic-services {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    
+    .ic-service-card {
+        max-width: 100%;
+    }
+    
+    .ic-process-steps {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    
+    .ic-compliance-grid {
+        grid-template-columns: 1fr;
+    }
+}

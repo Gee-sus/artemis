@@ -42,7 +42,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Key Features Grid */
+
 .key-features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -243,5 +243,5 @@ body::after {
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: url('/static/images/nz-customs.jpg');
-}
+    content: url('/static/images/car_imports.jpg');
+} 

@@ -1,8 +1,51 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/air_freight.css') }}">
+{% endblock %}
 
 {% block content %}
+<div class="air-freight-banner">
+    <div class="air-freight-banner-overlay"></div>
+    <div class="air-freight-banner-content">
+        <h1>Air Freight Solutions</h1>
+        <p>Connecting New Zealand to Global Markets</p>
+        <a href="/lets-begin" class="air-freight-cta-button" target="_blank">Begin Shipping</a>
+    </div>
+</div>
 
-<h2>air freight</h2>
+<div class="air-freight-main-container">
+    <div class="air-freight-cards-grid">
+        <div class="air-freight-card">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Express Air Freight to Australia & Asia</li>
+                <li>Trans-Tasman Priority Shipping</li>
+                <li>Temperature-Controlled Export Solutions</li>
+                <li>NZ Customs & MPI Clearance Support</li>
+                <li>Perishable Goods Handling</li>
+            </ul>
+        </div>
 
+        <div class="air-freight-card">
+            <h3>Key Trade Routes</h3>
+            <ul>
+                <li>Direct Services to Sydney, Melbourne & Brisbane</li>
+                <li>Asian Hubs: Singapore, Hong Kong & Shanghai</li>
+                <li>Pacific Islands Freight Network</li>
+                <li>North American Connections via LAX</li>
+            </ul>
+        </div>
+
+        <div class="air-freight-card">
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li>24/7 Shipment Tracking & Support</li>
+                <li>NZ-Based Customs Expertise</li>
+                <li>Competitive Trans-Tasman Rates</li>
+                <li>Local Knowledge, Global Network</li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
