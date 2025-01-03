@@ -1,0 +1,524 @@
+/* Reset previous styles */
+.ts-hero-section *,
+.ts-services-section *,
+.ts-benefits-section *,
+.ts-signup-section * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* New styles */
+:root {
+    --ts-primary-color: #2563eb;
+    --ts-secondary-color: #1e40af;
+    --ts-text-color: #1f2937;
+    --ts-light-bg: #f3f4f6;
+}
+
+.ts-hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/nz_trucks.jpg');
+    background-size: cover;
+    background-position: center 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.ts-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ts-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.ts-hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.ts-hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.ts-primary-button, .ts-secondary-button {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ts-primary-button {
+    background: var(--ts-primary-color);
+    color: white;
+    border: 2px solid var(--ts-primary-color);
+}
+
+.ts-primary-button:hover {
+    background: var(--ts-secondary-color);
+    border-color: var(--ts-secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ts-secondary-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.ts-secondary-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.ts-services-section {
+    padding: 80px 20px;
+    background: var(--ts-light-bg);
+}
+
+.ts-services-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--ts-text-color);
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.ts-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ts-service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ts-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.ts-service-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ts-light-bg);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.ts-service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ts-service-card h3 {
+    text-align: center;
+    color: var(--ts-primary-color);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.ts-service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ts-service-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    color: var(--ts-text-color);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+}
+
+.ts-service-features li:last-child {
+    border-bottom: none;
+}
+
+.ts-service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--ts-primary-color);
+    font-weight: bold;
+}
+
+/* Add subtle gradient overlay on hover */
+.ts-service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(37,99,235,0.03), rgba(30,64,175,0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.ts-service-card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ts-services-section {
+        padding: 60px 20px;
+    }
+
+    .ts-services-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .ts-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ts-service-card {
+        padding: 25px;
+    }
+
+    .ts-service-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .ts-service-features li {
+        font-size: 1rem;
+        padding: 10px 0 10px 25px;
+    }
+}
+
+/* Form Styles */
+.ts-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ts-form-group {
+    margin-bottom: 20px;
+}
+
+.ts-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ts-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ts-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ts-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ts-hero-cta {
+        flex-direction: column;
+    }
+}
+
+.ts-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: -50px;
+    position: relative;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ts-stat-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.ts-stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.ts-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--ts-primary-color);
+    margin-bottom: 10px;
+}
+
+.ts-stat-text {
+    display: block;
+    color: var(--ts-text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ts-stats-bar {
+        grid-template-columns: 1fr;
+        margin-top: -30px;
+        padding: 20px;
+    }
+    
+    .ts-stat-item {
+        padding: 15px;
+    }
+    
+    .ts-stat-number {
+        font-size: 2rem;
+    }
+}
+
+.ts-benefits-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.ts-benefits-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--ts-text-color);
+    margin-bottom: 50px;
+}
+
+.ts-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ts-benefit-card {
+    background: var(--ts-light-bg);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ts-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ts-benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.ts-benefit-card h3 {
+    color: var(--ts-primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.ts-benefit-card p {
+    color: var(--ts-text-color);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ts-benefits-section {
+        padding: 60px 20px;
+    }
+
+    .ts-benefits-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .ts-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ts-benefit-card {
+        padding: 25px;
+    }
+}
+
+.ts-signup-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.ts-signup-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--ts-light-bg);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.ts-signup-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--ts-text-color);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.ts-carrier-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.ts-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ts-form-group {
+    margin-bottom: 5px;
+}
+
+.ts-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--ts-text-color);
+}
+
+.ts-form-group input[type="text"],
+.ts-form-group input[type="email"],
+.ts-form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.ts-form-group input:focus {
+    outline: none;
+    border-color: var(--ts-primary-color);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.ts-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.ts-checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ts-checkbox-grid label:hover {
+    background: rgba(37,99,235,0.05);
+}
+
+.ts-checkbox-grid input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    accent-color: var(--ts-primary-color);
+}
+
+.ts-submit-button {
+    background: var(--ts-primary-color);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.ts-submit-button:hover {
+    background: var(--ts-secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ts-signup-section {
+        padding: 40px 20px;
+    }
+
+    .ts-signup-container {
+        padding: 30px 20px;
+    }
+
+    .ts-signup-container h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .ts-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ts-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="sw-wrapper">
+    <div class="sw-hero">
+        <div class="sw-hero-header">
+            <h1>Logistics Software Solutions</h1>
+            <p>Comprehensive digital solutions for modern freight forwarding and logistics operations</p>
+            <a href="{{ url_for('lets_begin') }}" target="_blank" class="sw-hero-button">Let's Begin</a>
+        </div>
+    </div>
+
+    <div class="sw-solutions-heading">
+        <h2>Our Software Solutions</h2>
+        <p>Streamline your operations with our integrated logistics software suite</p>
+    </div>
+
+    <div class="sw-solutions-cards">
+        <div class="sw-card">
+            <i class="fas fa-ship"></i>
+            <h3>Container Tracking</h3>
+            <p>Real-time visibility of your containers across ports and vessels</p>
+        </div>
+
+        <div class="sw-card">
+            <i class="fas fa-truck-loading"></i>
+            <h3>Yard Management</h3>
+            <p>Optimize container positioning and yard operations</p>
+        </div>
+
+        <div class="sw-card">
+            <i class="fas fa-file-invoice"></i>
+            <h3>Documentation</h3>
+            <p>Streamlined container documentation and compliance</p>
+        </div>
+
+        <div class="sw-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Analytics</h3>
+            <p>Detailed insights into container utilization and performance</p>
+        </div>
+    </div>
+
+    <div class="sw-cta-section">
+        <div class="sw-cta-container">
+            <h2>Ready to Revolutionize Your Logistics Operations?</h2>
+            <p>Be among the first to experience our innovative solutions</p>
+            <div class="sw-cta-stats">
+                <div class="sw-stat-item">
+                    <span class="sw-stat-number">24/7</span>
+                    <span class="sw-stat-label">Support</span>
+                </div>
+                <div class="sw-stat-item">
+                    <span class="sw-stat-number">100%</span>
+                    <span class="sw-stat-label">NZ Based</span>
+                </div>
+                <div class="sw-stat-item">
+                    <span class="sw-stat-number">Free</span>
+                    <span class="sw-stat-label">Trial Period</span>
+                </div>
+            </div>
+            <a href="{{ url_for('lets_begin') }}" target="_blank" class="sw-hero-button">Let's Begin</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

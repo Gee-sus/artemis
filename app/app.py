@@ -65,9 +65,9 @@ def dangerous_goods():
     return render_template("services/dangerous_goods.html")
 
 
-@app.route("/services/project-cargo")
-def project_cargo():
-    return render_template("services/project_cargo.html")
+@app.route("/products/software-solutions")
+def software_solutions():
+    return render_template("products/software_solutions.html")
 
 @app.route("/services/3pl-services")
 def three_pl_services():

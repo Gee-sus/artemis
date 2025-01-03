@@ -368,3 +368,15 @@ body {
         width: 90%;
     }
 }
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    color: #000000; /* Changed from #0066cc to black */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}

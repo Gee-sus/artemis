@@ -5,9 +5,7 @@
 
 
  function handleSearch() {
-    if (trackingInput.value.trim() || shippingInput.value.trim()) {
-        modal.style.display = "flex";
-    }
+    modal.style.display = "flex";
  }
 
 

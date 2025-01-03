@@ -1,8 +1,147 @@
 {% extends "base.html" %}
 
-
 {% block content %}
+<div class="ts-hero-section">
+    <div class="ts-hero-content">
+        <h1>Drive Your Business Forward</h1>
+        <p class="ts-hero-subtitle">Join New Zealand's Digital Freight Network</p>
+        <div class="ts-hero-cta">
+            <a href="#signup-form" class="ts-primary-button">Become a Carrier</a>
+            <a href="{{ url_for('lets_begin') }}" class="ts-secondary-button">Learn More</a>
+        </div>
+    </div>
+</div>
 
-<h2>TS</h2>
+<div class="ts-stats-bar">
+    <div class="ts-stat-item">
+        <span class="ts-stat-number">24/7</span>
+        <span class="ts-stat-text">Load Access</span>
+    </div>
+    <div class="ts-stat-item">
+        <span class="ts-stat-number">14</span>
+        <span class="ts-stat-text">Day Payment Terms</span>
+    </div>
+    <div class="ts-stat-item">
+        <span class="ts-stat-number">$0</span>
+        <span class="ts-stat-text">Sign-up Fee</span>
+    </div>
+</div>
 
+<div id="benefits" class="ts-benefits-section">
+    <h2>Why Partner With Us?</h2>
+    <div class="ts-benefits-grid">
+        <div class="ts-benefit-card">
+            <img src="/static/images/icons/load-svgrepo-com.svg" alt="Loads">
+            <h3>Access to Loads</h3>
+            <p>Get real-time access to available freight across New Zealand</p>
+        </div>
+        
+        <div class="ts-benefit-card">
+            <img src="/static/images/icons/payment-method-pay-svgrepo-com.svg" alt="Payment">
+            <h3>Fast Payment</h3>
+            <p>Guaranteed payment within 14 days of delivery</p>
+        </div>
+        
+        <div class="ts-benefit-card">
+            <img src="/static/images/icons/routes-start-svgrepo-com.svg" alt="Routes">
+            <h3>Flexible Routes</h3>
+            <p>Choose loads that match your preferred routes and schedule</p>
+        </div>
+        
+        <div class="ts-benefit-card">
+            <img src="/static/images/icons/tools.svg" alt="Support">
+            <h3>Digital Tools</h3>
+            <p>Easy-to-use platform for load management and documentation</p>
+        </div>
+    </div>
+</div>
+
+<div class="ts-services-section">
+    <h2>Services for Carriers</h2>
+    <div class="ts-services-grid">
+        <div class="ts-service-card">
+            <div class="ts-service-icon">
+                <img src="/static/images/icons/tools.svg" alt="Digital Platform">
+            </div>
+            <h3>Digital Platform</h3>
+            <ul class="ts-service-features">
+                <li>24/7 access to available loads</li>
+                <li>Real-time load notifications</li>
+                <li>Easy document upload</li>
+                <li>Mobile app for on-the-go management</li>
+            </ul>
+        </div>
+
+        <div class="ts-service-card">
+            <div class="ts-service-icon">
+                <img src="/static/images/icons/payment-method-pay-svgrepo-com.svg" alt="Payment Services">
+            </div>
+            <h3>Payment Services</h3>
+            <ul class="ts-service-features">
+                <li>14-day payment terms</li>
+                <li>Digital invoicing system</li>
+                <li>Transparent payment tracking</li>
+                <li>Secure payment processing</li>
+            </ul>
+        </div>
+
+        <div class="ts-service-card">
+            <div class="ts-service-icon">
+                <img src="/static/images/icons/routes-start-svgrepo-com.svg" alt="Route Planning">
+            </div>
+            <h3>Route Planning</h3>
+            <ul class="ts-service-features">
+                <li>Optimized route suggestions</li>
+                <li>Return load matching</li>
+                <li>Preferred route settings</li>
+                <li>Regional load preferences</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="signup-form" class="ts-signup-section">
+    <div class="ts-signup-container">
+        <h2>Join Our Network</h2>
+        <form class="ts-carrier-form">
+            <div class="ts-form-grid">
+                <div class="ts-form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" required>
+                </div>
+                <div class="ts-form-group">
+                    <label for="tsl">TSL Number</label>
+                    <input type="text" id="tsl" required>
+                </div>
+                <div class="ts-form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="ts-form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+            </div>
+            <div class="ts-form-group">
+                <label>License Classes</label>
+                <div class="ts-checkbox-grid">
+                    <label><input type="checkbox"> Class 2 - Medium Rigid</label>
+                    <label><input type="checkbox"> Class 3 - Medium Combination</label>
+                    <label><input type="checkbox"> Class 4 - Heavy Rigid</label>
+                    <label><input type="checkbox"> Class 5 - Heavy Combination</label>
+                </div>
+            </div>
+            <div class="ts-form-group">
+                <label>Vehicle Types</label>
+                <div class="ts-checkbox-grid">
+                    <label><input type="checkbox"> Rigid Truck</label>
+                    <label><input type="checkbox"> Truck & Trailer</label>
+                    <label><input type="checkbox"> Refrigerated</label>
+                    <label><input type="checkbox"> Curtainside</label>
+                </div>
+            </div>
+            <button type="submit" class="ts-submit-button">Register Now</button>
+        </form>
+    </div>
+</div>
 {% endblock %}

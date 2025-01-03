@@ -93,6 +93,7 @@
 .cta-button.primary {
     background-color: #1e40af;
     color: white;
+    
     padding: 1rem 2.5rem;
     border-radius: 6px;
     font-size: 1.3rem;
@@ -104,6 +105,7 @@
 
 .cta-button.primary:hover {
     background-color: #1e3a8a;
+    
     transform: scale(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
