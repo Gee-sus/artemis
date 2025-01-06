@@ -1,74 +1,91 @@
 {% extends "base.html" %}
 
-
 {% block content %}
-<div class="lets-begin-container">
-    <div class="image-section">
-        <img src="{{ url_for('static', filename='images/happy-person.jpg') }}" alt="Welcome to Artemis" class="welcome-image">
+<div class="af-lets-begin-container">
+    <div class="af-lets-begin-image-section">
+        <img src="{{ url_for('static', filename='images/happy-person.jpg') }}" 
+             alt="Energetic person in front of shipping containers" 
+             class="af-lets-begin-welcome-image">
     </div>
-
-    <div class="contact">
-
-        <h2 class="begins">Let's Begin</h2>
-
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="flash-message {{ category }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}    
-
-
-        <form action="/lets-begin" method="POST">
-
-            <div class="form-group">
-                <label for="first_name">First Name</label>
-                <input type="text"  id="first_name" name="first_name" required>
-            </div>
-            <div class="form-group">
-                <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name" required>
-            </div>    
-            <div class="form-group">
-                <label for="email">Business Email</label>
-                <input type="email" id="email" placeholder="Enter your work email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="business_phone">Business Phone</label>
-                <input type="tel" id="business_phone" placeholder="Business Phone" name="business_phone" required>
-            </div>
-            <div class="form-group">
-
-                <label for="services">Services Needed:</label>
-                <select id="services" name="services" required>
-                    <option value="import">Import</option>
-                    <option value="export">Export</option>
-                    <option value="trucking">Trucking</option>
-                    <option value="warehousing">Warehousing</option>
-                </select>
-            </div>
-            <div class="form-group">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" row="5" placeholder="Write your message here for Artemis team..."></textarea>
-            </div>
-            <div class="form-buttons">
-
-                <button type="submit">Submit</button>
-            </div>    
-
-
-
-        </form>
     
+    <div class="af-lets-begin-contact">
+        <h2 class="af-lets-begin-title">Let's Begin</h2>
+        
+        <form action="{{ url_for('lets_begin') }}" method="POST" class="af-lets-begin-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            
+            <div class="af-lets-begin-section">
+                <div class="af-lets-begin-form-row">
+                    <div class="af-lets-begin-form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="af-lets-begin-form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                </div>
+            </div>
 
+            <div class="af-lets-begin-section">
+                <div class="af-lets-begin-form-row">
+                    <div class="af-lets-begin-form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" placeholder="work@company.com" required>
+                    </div>
+                    <div class="af-lets-begin-form-group">
+                        <label for="business_phone">Business Phone</label>
+                        <input type="tel" id="business_phone" name="business_phone" placeholder="+64" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="af-lets-begin-section">
+                <div class="af-lets-begin-services-grid">
+                    <div class="af-lets-begin-service-option">
+                        <input type="checkbox" id="import" name="services" value="import">
+                        <label for="import">
+                            <span class="af-lets-begin-service-icon">📦</span>
+                            Import
+                        </label>
+                    </div>
+                    <div class="af-lets-begin-service-option">
+                        <input type="checkbox" id="export" name="services" value="export">
+                        <label for="export">
+                            <span class="af-lets-begin-service-icon">🚢</span>
+                            Export
+                        </label>
+                    </div>
+                    <div class="af-lets-begin-service-option">
+                        <input type="checkbox" id="trucking" name="services" value="trucking">
+                        <label for="trucking">
+                            <span class="af-lets-begin-service-icon">🚛</span>
+                            Trucking
+                        </label>
+                    </div>
+                    <div class="af-lets-begin-service-option">
+                        <input type="checkbox" id="warehousing" name="services" value="warehousing">
+                        <label for="warehousing">
+                            <span class="af-lets-begin-service-icon">🏭</span>
+                            Warehousing
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="af-lets-begin-section">
+                <div class="af-lets-begin-form-group">
+                    <label for="message">Tell us about your requirements</label>
+                    <textarea id="message" name="message" rows="4" 
+                        placeholder="Share your logistics needs and we'll create a tailored solution..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="af-lets-begin-submit">
+                Submit
+                <span class="af-lets-begin-submit-icon">→</span>
+            </button>
+        </form>
     </div>
-
-
 </div>
-
-
 {% endblock %}

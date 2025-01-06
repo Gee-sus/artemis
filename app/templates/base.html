@@ -42,10 +42,15 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/lets_begin.css') }}">
     
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+    
 
    
+    {% if request.endpoint == 'login' %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/components/login.css') }}">
+    {% endif %}
     {% if request.endpoint == 'lets_begin' %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/lets_begin.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/lets_begin.css') }}">
     {% endif %}
     
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
@@ -64,7 +69,10 @@
                 
               <div class="dropdown">
                 
-                    <a href="#products" class="dropdown-toggle">Products</a>
+                    <a href="#products" class="dropdown-toggle">
+                        Products
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
                         <div class="dropdown-menu">
                             <a href="{{ url_for('artemis_booking') }}" target="_blank">Artemis booking</a>
                             <a href="{{url_for('customs_streamlined')}}" target="_blank">Customs Streamlined</a>
@@ -78,7 +86,10 @@
                 
                 </div>
                 <div class="dropdown services-dropdown">
-                    <a href= "#services" class="dropdown-toggle">Services</a>
+                    <a href="#services" class="dropdown-toggle">
+                        Services
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
                     <div class="dropdown-menu">
                         <div class="menu-item">
                             <a href="#freight-forwarding">Freight Forwarding</a>
@@ -113,8 +124,8 @@
                         </div>
                     </div>
                 </div>    
-                <a href= "{{ url_for('our_philosophy')}}" target="_blank">Our Philosophy</a>
-                <a href= "{{ url_for('lets_begin') }}" target="_blank">Let's Begin</a>
+                <a href="{{ url_for('our_philosophy')}}" target="_blank">Our Philosophy</a>
+                <a href="{{ url_for('lets_begin') }}" target="_blank">Let's Begin</a>
                 
                 </div>
             </nav>
@@ -126,9 +137,18 @@
         {% endblock %}
     </main>
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
     <footer class="footer">
-        <p>© 2024 Artemis Freight Forwarding Limited. All Rights Reserved.</p>
+        <p>© 2025 Artemis Freight Forwarding Limited. All Rights Reserved.</p>
         <nav class="footer-nav">
             <a href="privacy.html">Privacy Policy</a> | 
             <a href="terms.html">Terms of Service</a>

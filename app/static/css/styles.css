@@ -520,3 +520,479 @@ body::after {
     perspective: 1000;
 }
 
+/* Center Services Section */
+.af-core-services {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    scroll-margin-top: 80px; /* Adjusts scroll position to account for header */
+}
+
+.af-services-header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.af-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 450px));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .af-services-grid {
+        grid-template-columns: minmax(280px, 500px);
+    }
+    
+    .af-core-services {
+        padding: 3rem 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Service Card Hover Effects */
+.af-service-card {
+    transition: all 0.3s ease;
+    border-radius: 12px; /* Curved corners */
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.af-service-card h3 {
+    color: #1E3A8A;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;    
+}
+
+.af-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Hover Animation */
+.af-service-icon svg {
+    transition: all 0.3s ease;
+    stroke: #1E3A8A;
+}
+
+.af-service-card:hover .af-service-icon svg {
+    transform: scale(1.1) rotate(5deg);
+    stroke: #2563EB;
+}
+
+/* Link Hover Effect */
+.af-service-link {
+    display: inline-block;
+    color: #1E3A8A;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    border: 2px solid #1E3A8A;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.af-service-link:hover {
+    background: #1E3A8A;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+.af-service-link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.15);
+}
+
+/* Arrow animation */
+.af-service-link::after {
+    content: "→";
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.af-service-link:hover::after {
+    transform: translateX(4px);
+}
+
+.af-service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid #000000;
+    padding: 10px;
+    overflow: hidden; /* Keeps icon contained within circle */
+}
+
+.af-service-icon img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    fill: #1E3A8A;
+    max-width: 100%; /* Ensures image doesn't overflow */
+    max-height: 100%; /* Ensures image doesn't overflow */
+}
+
+/* Services Header Styling */
+.af-services-header h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A;  /* Primary blue */
+    margin-bottom: 1rem;
+}
+
+.af-services-header p {
+    font-size: 1.2rem;
+    color: #374151;  /* Faded black */
+    margin-bottom: 3rem;
+}
+
+/* Service Card and Hover Effects */
+.af-service-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.af-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styling */
+.af-service-link {
+    color: #1E3A8A;  /* Primary blue */
+    transition: all 0.3s ease;
+}
+
+.af-service-link:hover {
+    padding-right: 25px;
+}
+
+/* Simplified Section Styling */
+.af-section-title {
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+
+.af-content-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.af-column {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.af-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.af-column h4 {
+    color: #1E3A8A;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.af-column p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .af-content-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .af-content-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .af-section-title {
+        font-size: 2rem;
+        margin: 3rem 0 2rem;
+    }
+}
+
+/* CTA Section */
+.af-cta-section {
+    background: linear-gradient(rgba(26, 35, 126, 0.95), rgba(26, 35, 126, 0.95)),
+                url('../images/container-pull.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 6rem 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.af-cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.af-cta-container h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.af-cta-container p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.af-cta-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.af-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.af-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.af-stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.af-cta-button {
+    display: inline-block;
+    background: white;
+    color: #1E3A8A;
+    padding: 1.2rem 3.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.af-cta-button:hover {
+    background: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.af-cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .af-cta-section {
+        padding: 4rem 1rem;
+    }
+    
+    .af-cta-container h2 {
+        font-size: 2rem;
+    }
+    
+    .af-cta-container p {
+        font-size: 1rem;
+    }
+    
+    .af-cta-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .af-stat-number {
+        font-size: 2rem;
+    }
+
+    .af-cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+.af-service-icon img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    fill: #1E3A8A;
+}
+
+.af-service-features {
+    margin-bottom: 1rem;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.af-service-card:hover .af-service-icon img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.dropdown-arrow {
+    font-size: 0.7em;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: currentColor;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Mobile header styles */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+        position: relative;
+    }
+
+    /* Main dropdown menu */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 280px;
+        background: #1E3A8A;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        padding: 8px 0;
+    }
+
+    /* Menu items in services dropdown */
+    .menu-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Main category links (Freight Forwarding, etc.) */
+    .menu-item > a {
+        padding: 12px 20px;
+        color: white;
+        display: block;
+        text-decoration: none;
+        position: relative;
+    }
+
+    /* Submenu container */
+    .submenu {
+        display: none;
+        background: rgba(255, 255, 255, 0.05);
+        width: 100%;
+    }
+
+    /* Submenu links (Sea Freight, Air Freight, etc.) */
+    .submenu a {
+        padding: 12px 35px;
+        color: white;
+        display: block;
+        text-decoration: none;
+        font-size: 0.95em;
+    }
+
+    /* Show main dropdown when hovering Products or Services */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* Show submenu when hovering main categories */
+    .menu-item:hover .submenu {
+        display: block;
+    }
+
+    /* Hover effects */
+    .menu-item > a:hover,
+    .submenu a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Arrow styling */
+    .arrow {
+        float: right;
+        margin-left: 10px;
+    }
+
+    /* Ensure submenus stay visible */
+    .menu-item:hover .submenu,
+    .menu-item:focus .submenu,
+    .menu-item:active .submenu,
+    .submenu:hover {
+        display: block !important;
+    }
+}
+

@@ -1,20 +1,34 @@
 {% extends "base.html" %}
 
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+{% endblock %}
+
 {% block content %}
-<div class="thank-you-container">
-    <h2>Thank You!</h2>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="flash-message {{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-    <p>We appreciate your interest in Artemis Freight Forwarding.</p>
-    <div class="return-home">
-        <a href="{{ url_for('home') }}" class="home-button">Return to Home</a>
+<div class="artemis-thankyou-container">
+    <div class="artemis-thankyou-card">
+        <div class="artemis-thankyou-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Thank You!</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="artemis-thankyou-flash {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <p class="artemis-thankyou-text">We appreciate your interest in Artemis Freight Forwarding.</p>
+        <p class="artemis-thankyou-subtext">Our team will review your request and get back to you shortly.</p>
+        <div class="artemis-thankyou-return">
+            <a href="{{ url_for('home') }}" class="artemis-thankyou-button">
+                <i class="fas fa-arrow-left"></i>
+                Return to Home
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %} 

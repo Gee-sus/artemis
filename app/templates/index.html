@@ -36,96 +36,134 @@
                         
                     </div>
                 </div>
-                <section class="core-services">
-
-                    <div class="services-header">
+                <section class="af-core-services">
+                    <div class="af-services-header">
                         <h2>Your Digital Freight Partner</h2>
                         <p>End-to-end logistics solutions powered by technology</p>
                     </div>
 
-                    <div class="services-container">
-                        <div class="services-image">
-                            <img src="{{ url_for('static', filename='images/container-pull.jpg')}}" 
-                                 alt="Container logistics"
-                                 loading="eager"
-                                 decoding="async"/>
-
+                    <div class="af-services-grid">
+                        <!-- Container Freight Card -->
+                        <div class="af-service-card">
+                            <div class="af-service-icon">
+                                <img src="{{ url_for('static', filename='images/icons/container-crane-svgrepo-com.svg') }}" alt="Container Crane Icon" class="af-icon">
+                            </div>
+                            <h3>Container Freight Booking</h3>
+                            <div class="af-service-features">
+                                <ul>
+                                    <li>Real-time LCL & FCL rates</li>
+                                    <li>Automated booking system</li>
+                                    <li>Paperwork management</li>
+                                    <li>NVOCC services worldwide</li>
+                                    <li>Consolidated shipping solutions</li>
+                                </ul>
+                            </div>
+                            <p class="af-service-description">
+                                Simple container booking with real-time rates. Let us handle the details while you focus on your business growth.
+                            </p>
+                            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-service-link">Learn More →</a>
                         </div>
-                        <div class="services-content">
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <img/>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Container freight booking</h3>
-                                    <p>At Artemis Freight Forwarding Limited (AFFL), we know shipping can be stressful. That’s why we make container freight booking simple. With real-time rates for LCL (Less than Container Load) and FCL (Full Container Load), you always get the best deals. Our software takes care of booking, tracking, and paperwork. You can stop worrying about the details and focus on growing your business. We’re here to make shipping smooth, clear, and hassle-free.</p>
-                            
-                                </div>
 
+                        <!-- Digital Customs Card -->
+                        <div class="af-service-card">
+                            <div class="af-service-icon">
+                                <img src="{{ url_for('static', filename='images/icons/customs-check-examine-security-svgrepo-com.svg') }}" alt="Customs Check Icon" class="af-icon">
                             </div>
-                            
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <img/>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Digital Customs Clearance</h3>
-                                    <p>Let us take the hassle out of customs and MPI clearance for you. We’ll handle compliance, biosecurity checks, and paperwork, so your goods move smoothly. With advanced data tools, we’ll help you find the best international buyers and markets for your Kiwi products. From clearance to connections, we’re here to make global trade simple and personal for your business.</p>
-                                </div>
+                            <h3>Digital Customs Clearance</h3>
+                            <div class="af-service-features">
+                                <ul>
+                                    <li>Automated compliance checks</li>
+                                    <li>MPI clearance handling</li>
+                                    <li>Market intelligence tools</li>
+                                </ul>
                             </div>
+                            <p class="af-service-description">
+                                Streamlined customs and MPI clearance with advanced data tools for market insights.
+                            </p>
+                            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-service-link">Learn More →</a>
+                        </div>
 
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <img/>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Logistics Software solutions</h3>
-                                    <p>At Artemis Freight Forwarding, we understand that small business owners face unique challenges in managing their inventory, shipping, and real-time tracking needs. That’s why we offer custom-built software solutions designed to simplify your logistics operations and provide the control you need to grow your business.</p>
-                                </div>
+                        <!-- Software Solutions Card -->
+                        <div class="af-service-card">
+                            <div class="af-service-icon">
+                                <img src="{{ url_for('static', filename='images/icons/software-svgrepo-com.svg') }}" alt="Software Solutions Icon" class="af-icon">
                             </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <img/>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Nationwide Trucking Network</h3>
-                                    <p>Artemis Freight Forwarding connects your business to a robust network of over 1,000 owner-driver truck operators across New Zealand. Offering nationwide coverage, fast deliveries, and real-time tracking, we ensure your freight reaches its destination efficiently and securely. Trust us to streamline your logistics with professional, reliable, and scalable trucking solutions tailored to your needs.</p>
-                                </div>
+                            <h3>Logistics Software</h3>
+                            <div class="af-service-features">
+                                <ul>
+                                    <li>Custom-built solutions</li>
+                                    <li>Real-time tracking</li>
+                                    <li>Inventory management</li>
+                                </ul>
                             </div>
+                            <p class="af-service-description">
+                                Tailored software solutions to simplify your logistics operations.
+                            </p>
+                            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-service-link">Learn More →</a>
+                        </div>
 
+                        <!-- Trucking Network Card -->
+                        <div class="af-service-card">
+                            <div class="af-service-icon">
+                                <img src="{{ url_for('static', filename='images/icons/truck-long-svgrepo-com.svg') }}" alt="Trucking Network Icon" class="af-icon">
+                            </div>
+                            <h3>Nationwide Trucking</h3>
+                            <div class="af-service-features">
+                                <ul>
+                                    <li>1000+ owner-drivers</li>
+                                    <li>Nationwide coverage</li>
+                                    <li>Live tracking</li>
+                                </ul>
+                            </div>
+                            <p class="af-service-description">
+                                Connect with our extensive network of reliable trucking partners across New Zealand.
+                            </p>
+                            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-service-link">Learn More →</a>
+                        </div>
+
+                        <!-- Export Market Access Card -->
+                        <div class="af-service-card">
+                            <div class="af-service-icon">
+                                <img src="{{ url_for('static', filename='images/icons/ship-svgrepo-com.svg') }}" alt="Export Market Icon" class="af-icon">
+                            </div>
+                            <h3>Export Market Access</h3>
+                            <div class="af-service-features">
+                                <ul>
+                                    <li>Market research & analysis</li>
+                                    <li>International trade partnerships</li>
+                                    <li>Export compliance guidance</li>
+                                </ul>
+                            </div>
+                            <p class="af-service-description">
+                                Unlock new opportunities for your Kiwi products in international markets.
+                            </p>
+                            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-service-link">Learn More →</a>
                         </div>
                     </div>
-
-                    
                 </section>
+
+              
 
         
                 
-                <h3 class="section-title">From Assembly Line to your Hands</h3>
-                <section class="content-section">
-                    <div class="column">
-                        
-                        <h4>
-                            From Ship to Rail to Road: Redifining Freight Movement
-                        </h4>
+                <h3 class="af-section-title">Seamless Global Logistics</h3>
+                <section class="af-content-section">
+                    <div class="af-column">
+                        <h4>Sea, Rail & Road</h4>
                         <p>
-                            Artemis Freight Forwarding Limited streamlines logistics across sea, rail, and road, ensuring seamless transitions and real-time tracking at every stage. Our innovative technology connects global trade routes with precision, offering efficient, cost-effective, and transparent solutions. Experience freight movement that’s faster, smarter, and tailored to your business needs.
+                            Experience seamless logistics across all transport modes. Our technology ensures real-time tracking and efficient movement of your cargo from origin to destination.
                         </p>
                     </div>
-                    <div class="column">    
-                        <h4>
-                            Expert Customs Brokerage at Your Service
-                        </h4>
+                    <div class="af-column">    
+                        <h4>Customs Expertise</h4>
                         <p>
-                            Navigating global trade compliance is seamless with Artemis Freight Forwearding Limited. Our expert customs brokerage services ensure accurate documentation, swift clearances, and full compliance with regulations. Whether importing or exporting, we simplify complexities, saving you time and reducing costs. Trust us to handle your customs with unmatched expertise.        </p>
+                            Navigate global trade with confidence. Our customs team ensures smooth clearance, accurate documentation, and full compliance with all regulations.
+                        </p>
                     </div>
-                    <div class="column">    
-                            <h4>
-                            Trucking Redefined: Last Mile, Perfected
-                        </h4>
+                    <div class="af-column">    
+                        <h4>Last Mile Excellence</h4>
                         <p>
-                            Artemis Freight Forwarding Limited delivers excellence in last-mile logistics. Our trucking solutions are optimized for speed, precision, and reliability, ensuring your freight reaches its destination seamlessly. With real-time tracking and efficient route planning, we redefine trucking to meet your business needs, one flawless delivery at a time.
-                    
+                            Count on our reliable trucking network for precise, on-time deliveries. Real-time tracking and efficient routing ensure your cargo reaches its final destination seamlessly.
                         </p>
                     </div>    
                 </section> 
@@ -135,6 +173,28 @@
            
            
     </main>   
+
+    <div class="af-cta-section">
+        <div class="af-cta-container">
+            <h2>Ready to Transform Your Logistics?</h2>
+            <p>Experience seamless end-to-end freight solutions</p>
+            <div class="af-cta-stats">
+                <div class="af-stat-item">
+                    <span class="af-stat-number">24/7</span>
+                    <span class="af-stat-label">Support</span>
+                </div>
+                <div class="af-stat-item">
+                    <span class="af-stat-number">100%</span>
+                    <span class="af-stat-label">NZ Based</span>
+                </div>
+                <div class="af-stat-item">
+                    <span class="af-stat-number">Global</span>
+                    <span class="af-stat-label">Network</span>
+                </div>
+            </div>
+            <a href="{{ url_for('lets_begin') }}" target="_blank" class="af-cta-button">Let's Begin</a>
+        </div>
+    </div>
 
     <script src="{{ url_for('static', filename='js/modal.js')}}"></script>
     

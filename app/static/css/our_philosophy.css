@@ -1,0 +1,217 @@
+/* Hero Section */
+.artemis-philosophy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.97),
+        rgba(255, 255, 255, 0.97)),
+        url('../images/world-map-dots.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.artemis-philosophy-hero {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.artemis-philosophy-hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color, #1a365d);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.artemis-philosophy-mission {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.artemis-philosophy-mission p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-color, #2d3748);
+    font-weight: 500;
+}
+
+/* Core Philosophy Section */
+.artemis-philosophy-core {
+    padding: 4rem 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artemis-philosophy-core h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color, #1a365d);
+    margin-bottom: 3rem;
+}
+
+.artemis-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artemis-philosophy-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.artemis-philosophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.artemis-philosophy-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color, #2b6cb0);
+    margin-bottom: 1.5rem;
+}
+
+.artemis-philosophy-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color, #1a365d);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.artemis-philosophy-card p {
+    color: var(--text-color, #4a5568);
+    line-height: 1.6;
+}
+
+/* Wisdom Section */
+.artemis-philosophy-wisdom {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.artemis-philosophy-quote {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--accent-color, #2b6cb0);
+}
+
+.artemis-philosophy-quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--text-color, #2d3748);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.6;
+    position: relative;
+}
+
+cite {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--text-color-light, #4a5568);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.artemis-philosophy-context {
+    color: var(--text-color, #4a5568);
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Fix quote marks decoration */
+blockquote p::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--accent-color, #2b6cb0);
+    opacity: 0.3;
+    position: absolute;
+    left: 2rem;
+    top: -1rem;
+}
+
+blockquote p::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--accent-color, #2b6cb0);
+    opacity: 0.3;
+    position: absolute;
+    right: 2rem;
+    bottom: -2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .artemis-philosophy-quote {
+        margin: 2rem 1rem;
+        padding: 2rem;
+    }
+
+    blockquote {
+        font-size: 1.4rem;
+    }
+
+    cite {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .artemis-philosophy-container {
+        padding: 1rem;
+    }
+
+    .artemis-philosophy-hero {
+        padding: 2rem 0;
+    }
+
+    .artemis-philosophy-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .artemis-philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .artemis-philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+}
